@@ -1,6 +1,6 @@
-import knex from 'knex';
+import path from 'path'
 
-const connection = knex({
+module.exports = {
   client: 'pg',
   connection: {
     host : 'localhost',
@@ -8,7 +8,8 @@ const connection = knex({
     user:"postgres",
     password:"postgres",
     port:5432
+  },
+  migrations: {
+    directory: path.resolve(__dirname,"src","database","migrations")
   }
-})
-
-export default connection;
+}

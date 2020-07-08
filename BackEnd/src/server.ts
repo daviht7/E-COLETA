@@ -7,9 +7,4 @@ app.use(express.json());
 
 app.use(routes);
 
-app.post("/",(req,res) => {
-  return res.json(req.body)
-
-})
-
 app.listen(3333);

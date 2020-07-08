@@ -7,5 +7,4 @@ routes.get("/users",(req,res) => {
 });
 
 
-
 export default routes; 
